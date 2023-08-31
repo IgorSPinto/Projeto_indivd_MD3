@@ -12,12 +12,15 @@ const propriedades = [];
 
 // funçao para solicitar propriedades ao usuario
 function solicitarPropriedade() {
-  rl.question('Digite uma propriedade de CSS (ou digite "SAIR" para finalizar): ', (propriedade) => {
+  rl.question('Digite uma propriedade de CSS (ou digite "SAIR" para finalizar  o programa): ', (propriedade) => {
     if (propriedade.toUpperCase() === 'SAIR') {
-      // encerra a leitura e exibe as propriedades ordenadas quando "SAIR" eh digitado no terminal
       rl.close();
+
+      // tratamento de erro para inputs vazios ou inserção de números
+    } else if (propriedade.trim() === '' || !isNaN(parseFloat(propriedade))) {
+      console.log('Propriedade inválida. Digite uma propriedade válida.');
+      solicitarPropriedade();
     } else {
-      // adiciona a propriedade ao array e continua solicitando mais propriedades
       propriedades.push(propriedade);
       solicitarPropriedade();
     }
@@ -31,7 +34,7 @@ rl.on('close', () => {
   propriedades.sort();
   
   // exibe as propriedades ordenadas uma por linha
-  console.log('Propriedades ordenadas de A-Z:');
+  console.log('Propriedades inseridas ordenadas de A-Z:');
   propriedades.forEach((propriedade) => {
     console.log(propriedade);
   });
