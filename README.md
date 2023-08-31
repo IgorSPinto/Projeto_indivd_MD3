@@ -28,7 +28,3 @@ Este é o projeto individual do Módulo 4 do curso "Códigos do Amanhã" da Resi
    ```
 
 6. O programa irá solicitar que você insira propriedades de CSS uma por vez. Digite cada propriedade e pressione Enter. Para finalizar, digite "SAIR" (em letras maiúsculas ou minúsculas). O programa exibirá a lista das propriedades ordenadas em ordem alfabética.
-
----
-
-Certifique-se de substituir `script.js` pelo nome do arquivo que você está utilizando para o seu código. Além disso, personalize o README de acordo com as informações relevantes para o seu projeto.
