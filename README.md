@@ -1,6 +1,6 @@
 # Projeto Individual do Módulo 4 - Códigos do Amanhã
 
-Este é o projeto individual do Módulo 4 do curso "Códigos do Amanhã" da Resilia Educação. O projeto consiste em desenvolver uma ferramenta de linha de comando em Node.js para receber uma lista de propriedades de CSS, ordená-las e exibir o resultado.
+Este é o projeto individual do Módulo 4 do curso "Códigos do Amanhã" da Resilia. O projeto consiste em uma ferramenta de linha de comando em Node.js para receber uma lista de propriedades de CSS, ordená-las e exibir o resultado.
 
 ## Tecnologias Utilizadas
 
@@ -27,4 +27,4 @@ Este é o projeto individual do Módulo 4 do curso "Códigos do Amanhã" da Resi
    node script.js
    ```
 
-6. O programa irá solicitar que você insira propriedades de CSS uma por vez. Digite cada propriedade e pressione Enter. Para finalizar, digite "SAIR" (em letras maiúsculas ou minúsculas). O programa exibirá a lista das propriedades ordenadas em ordem alfabética.
+6. O programa irá solicitar que você insira propriedades de CSS uma por vez. Digite cada propriedade e pressione Enter. Oprograma não aceita inputs vazios ou de números, caso sejam inseridos uma mensagem de erro aparcerá no terminal. Para finalizar, digite "SAIR" (em letras maiúsculas ou minúsculas). O programa exibirá a lista das propriedades ordenadas em ordem alfabética.
