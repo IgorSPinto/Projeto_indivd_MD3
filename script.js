@@ -10,18 +10,28 @@ const rl = readline.createInterface({
 // array para armazenar as propriedades de CSS inseridas pelo usuario
 const propriedades = [];
 
+// funcao para validar uma propriedade de CSS
+function validarPropriedade(propriedade) {
+  return propriedade.trim() !== '' && isNaN(parseFloat(propriedade));
+}
+
+// função para adicionar uma propriedade válida ao array
+function adicionarPropriedade(propriedade) {
+  propriedades.push(propriedade);
+}
+
 // funçao para solicitar propriedades ao usuario
 function solicitarPropriedade() {
-  rl.question('Digite uma propriedade de CSS (ou digite "SAIR" para finalizar  o programa): ', (propriedade) => {
+  rl.question('Digite uma propriedade de CSS (ou digite "SAIR" para finalizar o programa): ', (propriedade) => {
     if (propriedade.toUpperCase() === 'SAIR') {
       rl.close();
 
       // tratamento de erro para inputs vazios ou inserção de números
-    } else if (propriedade.trim() === '' || !isNaN(parseFloat(propriedade))) {
-      console.log('Propriedade inválida. Digite uma propriedade válida.');
+    } else if (validarPropriedade(propriedade)) {
+      adicionarPropriedade(propriedade);
       solicitarPropriedade();
     } else {
-      propriedades.push(propriedade);
+      console.log('Propriedade inválida. Digite uma propriedade válida.');
       solicitarPropriedade();
     }
   });
